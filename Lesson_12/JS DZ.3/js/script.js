@@ -1,29 +1,63 @@
-const images = [
-  {url: "./img/1.jpg"},
-  {url: "./img/2.jpg"},
-  {url: "./img/3.jpg"},
-  {url: "./img/4.jpg" },
-  {url: "./img/5.jpg"},
-  {url: "./img/6.jpg"},
-  {url: "./img/7.jpg" },
-  {url: "./img/8.jpg"},
-  {url: "./img/9.jpg"},
-]
 
-const imageBox = document.querySelector(".imgBox");
-const buttonAction = document.querySelector(".buttonAction");
 
-function generateRandomNumber() {
-  let min = 1;
-  let max = images.length - 1;
-  let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-  return randomNumber;
-}
+const toDoList = document.querySelector(".toDoList");
+const toDoAddTask = document.querySelector(".AddTask");
 
-buttonAction.addEventListener("click", () => {
-  const indexRundom = generateRandomNumber();
-  const imRundom = images[indexRundom].url;
-  imageBox.innerHTML = `<img src=${imRundom} width="400" height="400">`;
+const newList = document.createElement('li');
+newList.textContent = "Завдання 1"
+const toDoDeleteTask = document.createElement('button');
+toDoDeleteTask.textContent = "Видалити"
+
+toDoList.appendChild(newList);
+newList.appendChild(toDoDeleteTask);
+
+toDoAddTask.addEventListener("click", () =>{
+
+  const header = document.querySelector('.no-tasks-message');
+  if (header) {
+      toDoList.removeChild(header);
+  }
+  
+  const newList = document.createElement('li');
+  const dataInput = document.querySelector('#dataInput').value;
+  newList.textContent = dataInput + " ";
+  const toDoDeleteTask = document.createElement('button');
+  toDoDeleteTask.textContent = "Видалити"
+  toDoList.appendChild(newList);
+  newList.appendChild(toDoDeleteTask);
+
 })
+
+
+toDoList.addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+      const li = event.target.parentElement;
+      toDoList.removeChild(li);
+
+      var Tasks = toDoList.getElementsByTagName('li');
+      var countTasks = Tasks.length;
+      console.log(countTasks);
+
+      const header = document.querySelector('.no-tasks-message');
+      if (countTasks === 0) {
+          if (!header) {
+              const newHeader = document.createElement('h1');
+              newHeader.textContent = "You are have not Tasks";
+              newHeader.classList.add('no-tasks-message');
+              toDoList.appendChild(newHeader);
+          }
+      } else {
+          if (header) {
+              toDoList.removeChild(header);
+          }
+      }
+  }
+});
+
+
+
+
+
+
 
 

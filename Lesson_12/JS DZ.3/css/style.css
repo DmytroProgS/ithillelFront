@@ -9,3 +9,13 @@
 .changeColor {
     color:red;
 }
+
+td {
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+}
+
+td.color {
+  background: brown;
+}
