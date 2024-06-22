@@ -36,7 +36,6 @@ toDoList.addEventListener("click", (event) => {
 
       var Tasks = toDoList.getElementsByTagName('li');
       var countTasks = Tasks.length;
-      console.log(countTasks);
 
       const header = document.querySelector('.no-tasks-message');
       if (countTasks === 0) {
