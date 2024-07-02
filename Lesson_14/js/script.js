@@ -41,7 +41,6 @@ for (let i = 0; i < images.length; i++) {
         currentIndex = i;
         updateSlider();
     });
- 
 }
 
 const updateSlider = () => {
