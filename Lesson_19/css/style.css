@@ -1,0 +1,27 @@
+
+h1 {
+    font-size:20px;
+    display: flex;
+    justify-content: center
+}
+
+li {
+  list-style-type: none;
+}
+
+#weather-forecast {
+  display: flex;
+  justify-content: center;
+}
+
+.update-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-data-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
