@@ -1,0 +1,18 @@
+{
+  "name": "home-work-21",
+  "version": "1.0.0",
+  "description": "home work full stack",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel main.js -o main-compiled.js"
+  },
+  "author": "dmytro",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "express": "^4.19.2"
+  }
+}
