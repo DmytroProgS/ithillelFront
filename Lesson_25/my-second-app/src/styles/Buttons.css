@@ -1,0 +1,11 @@
+
+
+.button-style {
+  background-color: green;
+  color:white; 
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
