@@ -1,28 +1,22 @@
+// src/components/WinnerResult.js
 import React, { Component } from 'react';
-import smiley1 from '../assets/images/smile-1.jpg';
-import smiley2 from '../assets/images/smile-2.jpg';
-import smiley3 from '../assets/images/smile-3.jpg';
-import smiley4 from '../assets/images/smile-4.jpg';
-import smiley5 from '../assets/images/smile-5.jpg';
-
-const smileyImages = [smiley1, smiley2, smiley3, smiley4, smiley5];
+import smileyImages from '../components/SmileyImages';
 
 class WinnerResult extends Component {
   render() {
-    const { winnerIndex, votes, resultsShown } = this.props;
+    const { smileys, winnerIndex, resultsShown } = this.props;
 
-    const totalVotes = votes.reduce((total, current) => total + current, 0);
-
-    if (resultsShown && totalVotes === 0) {
+    if (resultsShown && winnerIndex === -1) {
       return <p>Ніхто не голосував</p>;
     }
 
     if (resultsShown && winnerIndex !== null) {
+      const winner = smileys[winnerIndex];
       return (
         <div className="winner">
           <h3>Переможець:</h3>
-          <img src={smileyImages[winnerIndex]} alt="winner" />
-          <p>Кількість голосів: {votes[winnerIndex]}</p>
+          <img src={smileyImages[winner.id - 1]} alt="winner" /> 
+          <p>Кількість голосів: {winner.votes}</p>
         </div>
       );
     }
