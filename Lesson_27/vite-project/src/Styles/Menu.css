@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Стилі для світлої теми */
+  .light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Стилі для темної теми */
+  .dark {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: inherit;
+    justify-content: center;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
