@@ -5,7 +5,6 @@ import "./Styles/Menu.css"
 import ErrorBoundary from '../src/components/ErrorBoundary/ErrorBoundary.jsx';
 
 
- 
 function App() {
 
   const { theme, toggleTheme } = useTheme();
