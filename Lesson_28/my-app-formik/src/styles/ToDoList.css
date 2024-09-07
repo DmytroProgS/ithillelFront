@@ -1,75 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    line-height: 1.2;
-    font-size: 18px;
-}
-
-h1, h2 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
 .container {
-    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
-    max-width: 75%;
-    padding-bottom: 50px;
-}
+    padding: 1rem;
+  }
+  
 
-.form {
-    background: #fff;
-    padding: 10px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+
+  .form__group {
     display: flex;
-    justify-content: center;
-}
-
-.form__input {
-    min-height: 25px;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid;
-}
-
-.form__btn {
-    background: #0be69d;
-    border: none;
-    cursor: pointer;
-    width: 100px;
-}
-
-.todo-item {
-    display: flex;
-    padding: 10px;
-    background: #fff;
-    border-radius: 10px;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.todo-item--checked {
-    text-decoration: line-through;
-}
-.todo-item__description {
+    margin-bottom: 0.5rem; /* Зменшено відступ для більш компактного вигляду */
+  }
+  
+  .form__input {
     flex-grow: 1;
-    padding-left: 10px;
-    color:black;
-}
-.todo-item__delete {
-    background: #0be69d;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form__btn {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    width: 95px;
-    padding: 10px;
-}
-
-.todo-item-done {
-  display: none;
-}
+  }
+  
+  .form__btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .form__error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    text-align: left;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .todo-item__description {
+    margin-left: 0.5rem;
+    flex-grow: 1;
+  }
+  
+  .todo-item--checked {
+    color: #888;
+    text-decoration: line-through;
+  }
+  
+  .todo-item__delete {
+    margin-left: 0.5rem;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .todo-item__delete:hover {
+    background-color: #c82333;
+  }
+  
+  .js--todos-wrapper {
+    background-color: #fff;
+  }

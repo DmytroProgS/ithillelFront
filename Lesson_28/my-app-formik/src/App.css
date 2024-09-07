@@ -1,47 +1,5 @@
-/* src/Styles.css */
-.App {
-  font-family: Arial, sans-serif;
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
 
-form {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 70%;
-  margin-right: 10px;
-}
-
-button {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  background-color: #28a745;
-  color: white;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ccc;
-}
+body {
+    background: #0be69d;
+   }
