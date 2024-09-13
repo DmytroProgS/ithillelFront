@@ -1,22 +1,26 @@
-
 import './App.css';
-import Title from './components/Title/Title'
-import Input from './components/Input/Input'
-import Texteria from './components/Input/Texteria'
-
+import React, { useState } from 'react';
+import Title from './components/Title/Title';
+import ApiInput from './components/Input/ApiInput';
+import Textarea from './components/Input/Textarea';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
-    <div className="App" >
-      <header className="App-header">
-          <Title text="SWAPI"/>
-          <Input type="text"/>
-          <Texteria/>
-    
-      </header>
-    </div>
-  );
+    const [data, setData] = useState({});
+
+    const handleFetchData = (fetchedData) => {
+        setData(fetchedData);
+    };
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <Title text="SWAPI" />
+                <ApiInput onFetchData={handleFetchData} />
+                <Textarea text={data} />
+            </header>
+        </div>
+    );
 }
 
 export default App;
