@@ -1,4 +1,4 @@
-// reducer.js
+
 import { SET_TODOS, ERROR_TODOS } from '../Actions/Actions';
 
 const initialState = {
