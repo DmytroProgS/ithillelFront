@@ -1,0 +1,29 @@
+.word {
+    color: brown;
+    font-size: 25px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.result {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.red {
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+
+.green {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
